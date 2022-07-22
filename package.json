@@ -1,0 +1,23 @@
+{
+  "name": "personal-web-gatsby",
+  "version": "1.0.0",
+  "private": true,
+  "description": "personal-web-gatsby",
+  "keywords": [
+    "gatsby"
+  ],
+  "scripts": {
+    "develop": "gatsby develop",
+    "start": "gatsby develop",
+    "build": "gatsby build",
+    "serve": "gatsby serve",
+    "clean": "gatsby clean"
+  },
+  "dependencies": {
+    "gatsby": "^4.19.2",
+    "gatsby-plugin-sass": "^5.19.0",
+    "react": "^18.1.0",
+    "react-dom": "^18.1.0",
+    "sass": "^1.53.0"
+  }
+}
