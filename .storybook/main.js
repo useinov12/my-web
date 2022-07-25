@@ -8,7 +8,7 @@ module.exports = {
   "addons": [
     "@storybook/addon-links",
     "@storybook/addon-essentials",
-    "@storybook/addon-interactions"
+    "@storybook/addon-interactions",
   ],
   "framework": "@storybook/react",
   "core": {
@@ -25,6 +25,10 @@ module.exports = {
       use: ['style-loader', 'css-loader', 'sass-loader'],
       include: path.resolve(__dirname, '../'),
     });
+
+    config.resolve.alias['@'] = path.resolve(__dirname, '../src')
+    config.resolve.alias['@components'] = path.resolve(__dirname, '../src/components')
+    config.resolve.alias['@assets'] = path.resolve(__dirname, '../src/assets')
 
     // Return the altered config
     return config;
