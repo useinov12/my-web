@@ -17,7 +17,6 @@
     "gatsby-page-utils": "^2.19.0",
     "gatsby-parcel-config": "^0.10.1",
     "gatsby-plugin-alias-imports": "^1.0.5",
-    "gatsby-plugin-layout": "^3.19.0",
     "gatsby-plugin-nodejs": "^0.7.0",
     "gatsby-plugin-page-creator": "^4.19.0",
     "gatsby-plugin-resolve-src": "^2.1.0",
