@@ -8,6 +8,7 @@
 
 /* Remove default margin */
 body,
+html,
 h1,
 h2,
 h3,
@@ -18,6 +19,10 @@ blockquote,
 dl,
 dd {
   margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden; 
 }
 
 /* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
@@ -31,14 +36,14 @@ html:focus-within {
   scroll-behavior: smooth;
 }
 
-/* Set core body defaults */
+// /* Set core body defaults */
 body {
   min-height: 100vh;
   text-rendering: optimizeSpeed;
   line-height: 1.5;
 }
 
-/* A elements that don't have a class get default styles */
+// /* A elements that don't have a class get default styles */
 a:not([class]) {
   text-decoration-skip-ink: auto;
 }
