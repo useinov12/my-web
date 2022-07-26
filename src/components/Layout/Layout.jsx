@@ -40,7 +40,7 @@ const Layout = ({children}) => {
             })
             tl.to( contactBtnRef.current, {
                 y:'0vh',
-                left: '7vw',
+                left: '4vw',
                 duration:.6,
                 ease:'expo.inOut'
             })
@@ -55,14 +55,14 @@ const Layout = ({children}) => {
             tl.to( contactBtnRef.current, {
                 y:'0vh',
                 left:'-70vw',
-                duration:.3,
+                duration:.4,
                 ease:'expo.in'
             })
-            tl.to( queryInfoSection('.info-container'),{ opacity:0, duration:.3 } )
+            tl.to( queryInfoSection('.info-container'),{ opacity:0, duration:.4 } )
             tl.to(MainBoxRef.current, {
                 height:'30vh',
                 borderRadius: '25% 25% 0 0',
-                duration:.7,
+                duration:.9,
                 ease:'expo.inOut'
             })
         }
@@ -97,17 +97,18 @@ const Layout = ({children}) => {
                     contactFormIsOpen={contactFormIsOpen}
                 /> */}
                 <div ref={MainBoxRef} className={`main-content ${openMenu ? 'expanded' : '' }`}>
-                    <div ref={contactBtnRef}  className={'button--contacts-container'}>
 
+                    
+                    <nav className='navigation'>
+                    <div ref={contactBtnRef}  className={'button--contacts-container'}>
                         {<Link to="/">
                             <Button 
                                 label={'contacts'}
-                                className={'button--contacts'}
+                                className={'button--nav'} 
+                                active={pathname === '/' ? true:false }
                             />
                         </Link>}
                     </div>
-                    
-                    <nav className='navigation'>
                     <Link to="/About"  >
                         <Button 
                             label={'about'}

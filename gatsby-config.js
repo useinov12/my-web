@@ -6,7 +6,6 @@ module.exports = {
     siteUrl: `https://www.yourdomain.tld`
   },
   plugins: ["gatsby-plugin-sass", "gatsby-plugin-resolve-src", 
-  // 'gatsby-plugin-layout',
   {
     resolve: `gatsby-plugin-alias-imports`,
     options: {
