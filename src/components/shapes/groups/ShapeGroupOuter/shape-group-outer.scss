@@ -1,6 +1,7 @@
 .ShapeGroupOuter{
     position: relative;
     padding: 1rem;
+    margin-top: 2rem;
     display: flex;
     flex-direction: column;
     width:15rem;
@@ -11,13 +12,23 @@
         position: absolute;
     }
     &.left{
-        left:0;
+        left:-7rem;
         top:0;
     }
     &.right{
-        right:0;
+        right:-7rem;
         top:0;
     }
+    @media(min-width:700px){
+        &.left{
+            left:0;
+            top:0;
+        }
+        &.right{
+            right:0;
+            top:0;
+        }
+      }
 
     /* initial positions, inculdes unchangable hieght */
     &.left{
