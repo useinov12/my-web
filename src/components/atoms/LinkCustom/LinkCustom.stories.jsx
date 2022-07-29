@@ -11,7 +11,7 @@ export default{
 }
 
 
-const Template = (args) => <Link {...args} />;
+const Template = (args) => <LinkCustom {...args} />;
 
 export const LinkRegular = Template.bind({});
 
