@@ -1,9 +1,10 @@
 @use '../../styles/globals/variables';
 
-
 .layout{
   height: 100vh;
   width: 100vw;
+  min-width: 100vw;
+  overflow-x: hidden;
   position: relative;
   display: flex;
   flex-direction: column;
@@ -11,9 +12,8 @@
   align-items: center;
   background-color: variables.$layout-bg;
   color: variables.$color-text;
-  box-shadow: inset 5px 5px 45px rgba(20, 33, 56, .96),
-  inset 5px 5px 45px rgba(4, 6, 8, 0.66);
-
+  box-shadow: inset 15px 15px 45px rgba(20, 33, 56, .96),
+  inset 15px 15px 45px rgba(4, 6, 8, 0.66);
 }
 
 .contacts{
@@ -29,10 +29,10 @@
   position: fixed;
   bottom: 0;
   height: 30vh;
-  max-width: 100rem;
+  min-width: 100vw;
   margin:0 auto ;
+  // padding: 1rem;
 
-  width: 103vw;
   overflow-x: hidden;
   border-top: 1px solid white;
   background-color: rgba(29,30,32, 1);
@@ -41,6 +41,8 @@
 
   flex-direction: column;
   border-radius: 25% 25% 0 0;
+  -moz-border-radius:25% 25% 0 0;
+  -webkit-border-radius:25% 25% 0 0;
 
   @media(min-width:1290px){
     .button--contacts-container{
@@ -71,8 +73,10 @@
   align-items: center;
   overflow-y: scroll;
   &::-webkit-scrollbar {
-    width: 0;
+    display: none;
   }
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
   @media(min-width:700px){
     &{
       margin: 0 auto;
