@@ -13,9 +13,7 @@ const Card = (props) => {
                 <h1>{heading}</h1>
                 <h2>{subHeading}</h2>
                 <div className={'text-container'}>
-                    <Text>
-                        {text}
-                    </Text>
+                    {text.map( (paragraph, idx) => <Text key={idx} >{paragraph}</Text>)}
                 </div>
             </div>
 
