@@ -1,0 +1,97 @@
+.ShapeGroupOuter{
+    position: relative;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    width:15rem;
+    height: 20rem;
+    position: absolute;
+    &>*{
+        margin: .2rem;
+        position: absolute;
+    }
+    &.left{
+        left:0;
+        top:0;
+    }
+    &.right{
+        right:0;
+        top:0;
+    }
+
+    /* initial positions, inculdes unchangable hieght */
+    &.left{
+        :nth-child(2){
+            left:-5rem;
+        }
+        :nth-child(3){
+            left:-5rem;
+            top:2rem;
+        }
+        :nth-child(4){
+            left:-5rem;
+            top:7rem;
+        }
+        :nth-child(5){
+            left:-5rem;
+            top:7rem;
+        }
+        :nth-child(6){
+            left:-5rem;
+            top:10rem;
+        }
+        :nth-child(7){
+            left:-5rem;
+            top:12rem;
+        }
+        :nth-child(8){
+            left:-5rem;
+            top:17rem;
+        }
+        :nth-child(9){
+            left:-5rem;
+            top:14rem;
+        }
+        :nth-child(10){
+            left:-5rem;
+            top:17rem;
+        }
+    }
+    &.right{
+        :nth-child(2){
+            right:-5rem;
+        }
+        :nth-child(3){
+            right:-5rem;
+            top:2rem;
+        }
+        :nth-child(4){
+            right:-5rem;
+            top:7rem;
+        }
+        :nth-child(5){
+            right:-5rem;
+            top:7rem;
+        }
+        :nth-child(6){
+            right:-5rem;
+            top:10rem;
+        }
+        :nth-child(7){
+            right:-5rem;
+            top:12rem;
+        }
+        :nth-child(8){
+            right:-5rem;
+            top:17rem;
+        }
+        :nth-child(9){
+            right:-5rem;
+            top:14rem;
+        }
+        :nth-child(10){
+            right:-5rem;
+            top:17rem;
+        }
+    }
+}

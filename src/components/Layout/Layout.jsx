@@ -1,5 +1,7 @@
 import React, {useState, useRef, useEffect, useContext} from 'react'
 
+import ShapeGroupOuter from '@components/shapes/groups/ShapeGroupOuter/ShapeGroupOuter'
+
 import {LayoutContext} from './Context/LayoutContextProvider'
 import { useLocation } from '@reach/router';
 import { Link } from "gatsby"
@@ -78,6 +80,8 @@ const Layout = ({children}) => {
     return (
         <>
             <div className={'layout'} >
+                <ShapeGroupOuter orient={'left'} />
+                <ShapeGroupOuter orient={'right'}/>
                 <div className={'contacts'}>
                     <h2>CONTACTS</h2>
                     <div className={'contacts-links-container'}>
