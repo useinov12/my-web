@@ -48,7 +48,7 @@ const Layout = ({children}) => {
             })
             tl.to( queryInfoSection('.info-container'),{ opacity:1, duration:.5 } )
         } 
-    },[openMenu, pathname]);
+    },[openMenu]);
 
 
     useEffect(() => {
@@ -56,7 +56,7 @@ const Layout = ({children}) => {
         if(!openMenu && pathname === '/') {
             tl.to( contactBtnRef.current, {
                 y:'0vh',
-                left:'-70vw',
+                left:'-100vw',
                 duration:.4,
                 ease:'expo.in'
             })
@@ -64,11 +64,11 @@ const Layout = ({children}) => {
             tl.to(MainBoxRef.current, {
                 height:'30vh',
                 borderRadius: '25% 25% 0 0',
-                duration:.9,
+                duration:1,
                 ease:'expo.inOut'
             })
         }
-    },[openMenu, pathname]);
+    },[openMenu]);
 
     useEffect(()=>{
         let tl = gsap.timeline()
