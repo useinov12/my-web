@@ -12,3 +12,6 @@ export default{
 const Template = (args) => <Layout {...args} />;
 
 export const FullScreenLayout = Template.bind({});
+FullScreenLayout.args ={
+    children:<h1>Hello world</h1>
+}

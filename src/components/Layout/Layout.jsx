@@ -7,7 +7,7 @@ import { useLocation } from '@reach/router';
 import { Link } from "gatsby"
 import { gsap } from "gsap";
 
-// import ContactForm from 'components/ContactForm/ContactForm'
+import ContactForm from '@components/ContactForm/ContactForm'
 import LinkCustom from '@components/atoms/LinkCustom/LinkCustom'
 import Button from '@components/atoms/Button/Button'
 
@@ -23,6 +23,7 @@ const Layout = ({children}) => {
     const { openMenu } = useContext(LayoutContext)
 
     const [contactFormIsOpen, setContactFormIsOpen ] = useState(false)
+    const handleCloseForm = ( ) =>  setContactFormIsOpen(p=>!p) 
 
     
     //gsap
@@ -63,7 +64,7 @@ const Layout = ({children}) => {
             tl.to( queryInfoSection('.info-container'),{ opacity:0, duration:.4 } )
             tl.to(MainBoxRef.current, {
                 height:'30vh',
-                borderRadius: '25% 25% 0 0',
+                borderRadius:'25% 25% 0 0 ',
                 duration:1,
                 ease:'expo.inOut'
             })
@@ -74,7 +75,6 @@ const Layout = ({children}) => {
         let tl = gsap.timeline()
         tl.to(queryInfoSection('.info-container'), { opacity:1, duration:.3} )
     },[pathname])
-
 
 
     return (
@@ -91,48 +91,50 @@ const Layout = ({children}) => {
                         <LinkCustom  large link={'https://github.com/ruslaaaan'}>
                             <FaGithub/>
                         </LinkCustom>
-                        <LinkCustom  large onClick={()=>setContactFormIsOpen(!contactFormIsOpen)} >
-                            <SiGmail/>
+                        <LinkCustom  large>
+                            <SiGmail onClick={()=>handleCloseForm()}/>
                         </LinkCustom>
                     </div>
                 </div>
-                {/* <ContactForm 
-                    handleCloseForm={handleCloseForm} 
-                    contactFormIsOpen={contactFormIsOpen}
-                /> */}
+                
+                {contactFormIsOpen && <ContactForm handleCloseForm={handleCloseForm}/>}
+                
+                
                 <div ref={MainBoxRef} className={`main-content ${openMenu ? 'expanded' : '' }`}>
-
+                    <div className={'content'}>
                     
-                    <nav className='navigation'>
-                    <div ref={contactBtnRef}  className={'button--contacts-container'}>
-                        {<Link to="/">
-                            <Button 
-                                label={'contacts'}
-                                className={'button--nav'} 
-                                active={pathname === '/' ? true:false }
-                            />
-                        </Link>}
-                    </div>
-                    <Link to="/About"  >
-                        <Button 
-                            label={'about'}
-                            className={'button--nav'} 
-                            active={pathname === '/About' ? true:false }
-                        />
-                    </Link>
-                    <Link to="/Projects"  >
-                    <Button 
-                        label={'projects'}
-                        className={'button--nav'} 
-                        active={pathname === '/Projects' ? true:false }
-                        />
-                    </Link>
-
-                    </nav>
-                    <div  className={'info-container'}>
-                        {children}
+                    
+                        <nav className='navigation'>
+                            <div ref={contactBtnRef}  className={'button--contacts-container'}>
+                                {<Link to="/">
+                                    <Button 
+                                        label={'contacts'}
+                                        className={'button--nav'} 
+                                        active={pathname === '/' ? true:false }
+                                    />
+                                </Link>}
+                            </div>
+                            <Link to="/About"  >
+                                <Button 
+                                    label={'about'}
+                                    className={'button--nav'} 
+                                    active={pathname === '/About' ? true:false }
+                                />
+                            </Link>
+                            <Link to="/Projects"  >
+                                <Button 
+                                    label={'projects'}
+                                    className={'button--nav'} 
+                                    active={pathname === '/Projects' ? true:false }
+                                />
+                            </Link>
+                        </nav>
+                        <div  className={'info-container'}>
+                            {children}
+                        </div>
                     </div>
                 </div>
+                    
             </div>
         </>
     )
