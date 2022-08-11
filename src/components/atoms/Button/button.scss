@@ -1,0 +1,42 @@
+.button--default{
+    background-color:transparent;
+    border:none;
+    color:white;
+    cursor: pointer;
+    font-size:1.5rem;
+    text-transform: uppercase;
+    padding: .3rem;
+    border-bottom: 3px solid transparent;
+    transition: all .1s ease;
+}
+
+.button--nav{
+    opacity: .8;
+    transition: all .2s ease;
+}
+.button--nav:hover{
+    opacity: 1;
+}
+
+.button--nav-active{
+    opacity: 1;
+    color: #e74c3c;
+    border-bottom: 3px solid #e74c3c;
+    border-radius: 0 0 3px 3px ;
+}
+
+.button--nav-passive{
+    color: white;
+}
+
+.button--contacts{
+    transition: all .1s ease;
+    text-transform: uppercase;
+    border-bottom: 1px solid white;
+}
+
+.button--contacts:hover{
+    color: #e74c3c;
+    border-bottom: 3px solid #e74c3c;
+    border-radius: 0 0 3px 3px ;
+}

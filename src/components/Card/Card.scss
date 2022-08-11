@@ -1,0 +1,75 @@
+.card-component{
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+    padding: .5rem;
+    background-color: rgb(43, 43, 43);
+    -webkit-box-shadow: 0px 9px 11px -3px rgba(0,0,0,0.7); 
+    box-shadow: 0px 9px 11px -3px rgba(0,0,0,0.7);
+
+    h1, h3, h2{
+        color:white
+    }
+    @media(min-width:750px){
+        &{ 
+            flex-direction: row; 
+            padding: 1rem;
+            padding-left: 1.5rem;
+        }
+    }
+}
+
+
+.card-left-section{
+    padding: .5rem;
+    h1{
+        border-radius: 0 0 2px 2px;
+        border-bottom: 2px solid rgb(107, 107, 107);
+        margin-bottom: 1rem;
+    }
+    .text-container{
+        :nth-child(1){
+            margin-top: 1rem;
+            text-indent: 2rem;
+        }
+    }
+}
+
+.card-right-section{
+    min-width: 50%;
+    .image-container{
+        width: 100%;
+        border-radius: 10px;
+        -webkit-box-shadow: 0px 9px 11px -3px rgba(0,0,0,0.7); 
+        box-shadow: 0px 9px 11px -3px rgba(0,0,0,0.7);
+    }
+
+    img{
+        width: 100%;
+        border-radius: 10px;
+        object-fit: cover;
+    }
+
+    .project-info{
+        padding: .5rem;
+        margin-top: .5rem;
+    }
+
+    .chip-list{
+        margin-top: .5rem;
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+        padding: 1rem .5rem .5rem .5rem;
+    }
+    .card-links-container{
+        display: flex;
+        width: 100%;
+        padding: .5rem;
+        & >*{
+            margin-left: .2rem;
+            margin-right: .2rem;
+        }
+    }
+}

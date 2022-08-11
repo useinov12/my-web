@@ -6,6 +6,42 @@
   "keywords": [
     "gatsby"
   ],
+  "dependencies": {
+    "@storybook/preset-scss": "^1.0.3",
+    "axios": "^0.27.2",
+    "css-loader": "^5.2.6",
+    "firebase": "^9.9.1",
+    "gatsby": "^4.19.2",
+    "gatsby-core-utils": "^3.19.0",
+    "gatsby-graphiql-explorer": "^2.19.0",
+    "gatsby-legacy-polyfills": "^2.19.0",
+    "gatsby-link": "^4.19.1",
+    "gatsby-page-utils": "^2.19.0",
+    "gatsby-parcel-config": "^0.10.1",
+    "gatsby-plugin-alias-imports": "^1.0.5",
+    "gatsby-plugin-image": "^2.19.0",
+    "gatsby-plugin-nodejs": "^0.7.0",
+    "gatsby-plugin-page-creator": "^4.19.0",
+    "gatsby-plugin-resolve-src": "^2.1.0",
+    "gatsby-plugin-root-import": "^2.0.8",
+    "gatsby-plugin-sass": "^5.19.0",
+    "gatsby-plugin-sharp": "^4.19.0",
+    "gatsby-plugin-typescript": "^4.19.0",
+    "gatsby-plugin-utils": "^3.13.0",
+    "gatsby-react-router-scroll": "^5.19.0",
+    "gatsby-script": "^1.4.0",
+    "gatsby-sharp": "^0.13.0",
+    "gatsby-source-filesystem": "^4.19.0",
+    "gatsby-telemetry": "^3.19.0",
+    "gatsby-transformer-sharp": "^4.19.0",
+    "gatsby-worker": "^1.19.0",
+    "gsap": "^3.10.4",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-icons": "^4.4.0",
+    "sass": "^1.53.0",
+    "sass-loader": "^10.1.1"
+  },
   "scripts": {
     "develop": "gatsby develop",
     "start": "gatsby develop",
@@ -15,18 +51,7 @@
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook"
   },
-  "dependencies": {
-    "gatsby": "^4.19.2",
-    "gatsby-plugin-resolve-src": "^2.1.0",
-    "gatsby-plugin-sass": "^5.19.0",
-    "gsap": "^3.10.4",
-    "react": "^18.1.0",
-    "react-dom": "^18.1.0",
-    "react-icons": "^4.4.0",
-    "sass": "^1.53.0"
-  },
   "devDependencies": {
-    "@babel/core": "^7.18.9",
     "@storybook/addon-actions": "^6.5.9",
     "@storybook/addon-essentials": "^6.5.9",
     "@storybook/addon-interactions": "^6.5.9",
@@ -34,7 +59,16 @@
     "@storybook/builder-webpack5": "^6.5.9",
     "@storybook/manager-webpack5": "^6.5.9",
     "@storybook/react": "^6.5.9",
-    "@storybook/testing-library": "^0.0.13",
-    "babel-loader": "^8.2.5"
-  }
+    "@storybook/testing-library": "^0.0.13"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ruslaaaan/my-web.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ruslaaaan/my-web/issues"
+  },
+  "homepage": "https://github.com/ruslaaaan/my-web#readme"
 }

@@ -1,10 +1,19 @@
-import * as React from "react"
-import 'styles/index.scss'
+import React, {useContext, useEffect} from 'react'
+import {LayoutContext} from '@components/Layout/Context/LayoutContextProvider'
 
 const IndexPage = () => {
-  return (
-    <div>Index Page</div>
-  )
+    const {openMenu, setOpenMenu} = useContext(LayoutContext);
+
+
+    useEffect(() => {
+        if(openMenu)setOpenMenu(false)
+    }, [])
+
+    return (
+        <div className={'pages'}>
+            
+        </div>
+    )
 }
 
 export default IndexPage

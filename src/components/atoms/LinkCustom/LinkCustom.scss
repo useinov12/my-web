@@ -1,0 +1,34 @@
+.linkCustom{ 
+    width:fit-content;
+    text-decoration: none;  
+    background-color: none;
+    color:white;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 3px solid transparent;
+    transition: all .1s ease;
+    & :nth-child(1){
+        margin-right:.2rem ;
+        margin-top:.1rem ;
+    }
+    
+    &.small{
+        font-size: 1.2rem;
+    }
+    &.medium{
+        font-size: 1.5rem;
+    }
+    &.large{
+        font-size: 2.3rem;
+    }
+    cursor: pointer;
+    &:hover{
+        color: #e74c3c;
+        border-bottom: 3px solid #e74c3c;
+        border-radius: 0 0 3px 3px ;
+    }
+}
+
+
+
+

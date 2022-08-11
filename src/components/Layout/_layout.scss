@@ -1,0 +1,93 @@
+@use '../../styles/globals/variables';
+
+.layout{
+  height: 100vh;
+  width: 100vw;
+  min-width: 100vw;
+  overflow-x: hidden;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: variables.$layout-bg;
+  color: variables.$color-text;
+  box-shadow: inset 15px 15px 45px rgba(25, 47, 85, 0.96),
+  inset 15px 15px 45px rgba(4, 6, 8, 0.76);
+}
+
+.contacts{
+  h2:hover{ cursor:default }
+}
+
+.contacts-links-container{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.main-content{
+
+  position: fixed;
+  bottom: 0;
+  height: 30vh;
+  width: 100vw;
+  margin:0 auto ;
+
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden;
+
+  border-radius: 25% 25% 0 0;
+
+  border-top: 1px solid white;
+  background-color: variables.$layout-bg-2;
+  box-shadow: inset 15px 15px 45px rgba(31, 31, 31, 0.96);
+
+
+  .content{
+    width: 100vw;
+    height: 100%;
+    overflow-y: scroll;
+    -ms-overflow-style: none;
+    scrollbar-width: none; /* Firefox */
+
+
+  }
+
+  @media(min-width:1290px){
+    .button--contacts-container{
+      position: absolute;
+      bottom :10vh;
+      left:-70vw;
+    }
+  }
+
+  .navigation{
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    &>*{
+      margin-left: .5rem;
+      margin-right: .5rem;
+    }
+  }
+  
+}
+
+
+.info-container{
+  max-width: 60rem;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow-y: scroll;
+  
+  @media(min-width:700px){
+    &{
+      margin: 0 auto;
+    }
+  }
+}
