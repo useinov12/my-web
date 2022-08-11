@@ -12,8 +12,8 @@
   align-items: center;
   background-color: variables.$layout-bg;
   color: variables.$color-text;
-  box-shadow: inset 15px 15px 45px rgba(20, 33, 56, .96),
-  inset 15px 15px 45px rgba(4, 6, 8, 0.66);
+  box-shadow: inset 15px 15px 45px rgba(25, 47, 85, 0.96),
+  inset 15px 15px 45px rgba(4, 6, 8, 0.76);
 }
 
 .contacts{
@@ -41,7 +41,7 @@
 
   border-top: 1px solid white;
   background-color: variables.$layout-bg-2;
-
+  box-shadow: inset 15px 15px 45px rgba(31, 31, 31, 0.96);
 
 
   .content{
@@ -50,6 +50,7 @@
     overflow-y: scroll;
     -ms-overflow-style: none;
     scrollbar-width: none; /* Firefox */
+
 
   }
 
