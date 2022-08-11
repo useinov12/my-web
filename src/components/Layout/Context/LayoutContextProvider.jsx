@@ -3,7 +3,6 @@ import React, { createContext, useReducer } from "react";
 
 const initialState = {
     openMenu: false,
-
 }
 
 const actions = {
@@ -27,7 +26,7 @@ const LayoutContextProvider = ({ children }) => {
     const [state, dispatch] = React.useReducer(reducer, initialState)
 
     const value = {
-        openMenu: state.openMenu,
+        openMenu: false,
         setOpenMenu: value => {
             dispatch({ type: actions.SET_MENU, value })
         },
