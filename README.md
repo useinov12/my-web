@@ -1,54 +1,30 @@
-<p align="center">
-  <a href="https://www.gatsbyjs.com/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter">
-    <img alt="Gatsby" src="https://www.gatsbyjs.com/Gatsby-Monogram.svg" width="60" />
-  </a>
-</p>
-<h1 align="center">
-  Gatsby minimal starter
-</h1>
+## Personal Website
 
-## 🚀 Quick start
 
-1.  **Create a Gatsby site.**
+A personal Website.
+Built with React, Gatsby, JavaScript, Sass, Firebase and Storybook
 
-    Use the Gatsby CLI to create a new site, specifying the minimal starter.
+## Project Status
 
-    ```shell
-    # create a new Gatsby site using the minimal starter
-    npm init gatsby
-    ```
+The project is complete, but I plan to add more animations and functionality in future.
 
-2.  **Start developing.**
 
-    Navigate into your new site’s directory and start it up.
+## **Reflection**
 
-    ```shell
-    cd my-gatsby-site/
-    npm run develop
-    ```
+A personal Website to showcase projects, flex skills, and send positive vibes.
 
-3.  **Open the code and start customizing!**
+I started making prototype in Figma and came up with a design inspired by the Google Chrome greeting page:
 
-    Your site is now running at http://localhost:8000!
+<img width="500" alt="googleExample" src="https://user-images.githubusercontent.com/88290696/184224995-713dc748-a1bf-4ad0-9c97-5b2804879894.png">
 
-    Edit `src/pages/index.js` to see your site update in real-time!
+So I decided to make something similar and that was my first prototype:
 
-4.  **Learn more**
+<img width="500" alt="prototype" src="https://user-images.githubusercontent.com/88290696/184225015-a34000a4-e100-4d9c-afb2-4d6501c4ee76.png">
 
-    - [Documentation](https://www.gatsbyjs.com/docs/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
 
-    - [Tutorials](https://www.gatsbyjs.com/tutorial/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
+I learned GSAP animation Library which made animation 10x easier,  and I decided to experiment with it, which lead to the current state:
 
-    - [Guides](https://www.gatsbyjs.com/tutorial/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
+![pw-gif](https://user-images.githubusercontent.com/88290696/184225043-7b3e34b0-aae7-43b6-a199-917ab3c52aee.gif)
 
-    - [API Reference](https://www.gatsbyjs.com/docs/api-reference/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
 
-    - [Plugin Library](https://www.gatsbyjs.com/plugins?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
-
-    - [Cheat Sheet](https://www.gatsbyjs.com/docs/cheat-sheet/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
-
-## 🚀 Quick start (Gatsby Cloud)
-
-Deploy this starter with one click on [Gatsby Cloud](https://www.gatsbyjs.com/cloud/):
-
-[<img src="https://www.gatsbyjs.com/deploynow.svg" alt="Deploy to Gatsby Cloud">](https://www.gatsbyjs.com/dashboard/deploynow?url=https://github.com/gatsbyjs/gatsby-starter-minimal)
+Gatsby Pages are rendered inside the Layout wrapper and the Layout itself holds the the state between renders using React Context, which opens Main Content area in full height even if user skips the Home page and access directly sub-pages: website/About.com or website/Projects.com.
