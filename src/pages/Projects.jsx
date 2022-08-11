@@ -13,11 +13,11 @@ const Projects = () => {
     }, [])
 
     return (
-        <div className={'pages'}>
+        <>
             {
                 projects.map( projectArgs => <Card key={projectArgs.heading} {...projectArgs} />)
             }
-        </div>
+        </>
     )
 }
 

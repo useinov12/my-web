@@ -10,7 +10,7 @@ const IndexPage = () => {
     }, [])
 
     return (
-        <div className={'pages'}>
+        <div>
             
         </div>
     )

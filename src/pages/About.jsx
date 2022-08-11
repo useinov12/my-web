@@ -8,6 +8,7 @@ import 'styles/pages/about.scss'
 const About = () => {
     gsap.registerPlugin(TextPlugin);
     const {openMenu, setOpenMenu} = useContext(LayoutContext);
+    console.log(openMenu, setOpenMenu)
 
 
     useEffect(() => {
