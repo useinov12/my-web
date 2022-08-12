@@ -36,7 +36,7 @@ const Layout = ({children}) => {
         let tl = gsap.timeline();
         if(openMenu && pathname !== '/'){
             tl.to(MainBoxRef.current, {
-                height:'100vh',
+                height:'100%',
                 borderRadius:'0',
                 duration:.8,
                 ease:'expo.inOut'
@@ -63,7 +63,7 @@ const Layout = ({children}) => {
             })
             tl.to( queryInfoSection('.info-container'),{ opacity:0, duration:.4 } )
             tl.to(MainBoxRef.current, {
-                height:'30vh',
+                height:'30%',
                 borderRadius:'25% 25% 0 0 ',
                 duration:1,
                 ease:'expo.inOut'

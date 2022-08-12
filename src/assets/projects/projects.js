@@ -11,7 +11,7 @@ const projects = [
         subHeading:'Description',
         text:[
             'The project built in Typescript using React, D3.JS data visualization library and CSS. Functional testing done with Jest.', 
-            'By turning on Compare Mode user can choose a few algorithms to run at the same time.'
+            'User can run algoritms in Compare Mode or Single Mode'
         ],
         img:algovis,
         tech:[
@@ -21,7 +21,8 @@ const projects = [
             [<SiJest/>,'Jest'] 
         ],
         links:[ 
-            {link:'https://github.com/ruslaaaan/algo_visualization', label:[<FaGithub/>, 'GitHub']} 
+            {link:'https://github.com/ruslaaaan/algo_visualization', label:[<FaGithub/>, 'GitHub']},
+            {link:'https://rookie-visualizer.netlify.app/', label:'Live version'},
         ]
     } ,
     {
@@ -40,15 +41,15 @@ const projects = [
             [<SiGooglecloud/>,'GoogleCloud'], 
             [<SiMaterialui/>, 'MaterialUI']],
         links:[ 
-            {link:'https://github.com/ruslaaaan/travel_companion', label:[<FaGithub/>, 'GitHub']} 
+            {link:'https://github.com/ruslaaaan/travel_companion', label:[<FaGithub/>, 'GitHub']},
         ]
     } ,    
     {
         heading:'Personal Website',
         subHeading:'Description',
         text:[
-            'Tellus elementum sagittis vitae et leo duis ut diam quam nulla porttitor massa id neque aliquam vestibulum morbi blandit cursus risus at ultrices mi tempus imperdiet nulla malesuada pellentesque', 
-            'Elit eget gravida cum sociis natoque penatibus et magnis dis parturient montes nascetur ridiculus mus mauris'
+            "Personal website itself in portfolio project's too!", 
+            'Drawn in Figma, patiently created with React components in Storybook, peppered with GSAP animations, and came to life with Gatsby!'
         ],
         img:webgif,
         tech:[
