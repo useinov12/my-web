@@ -1,8 +1,5 @@
-
-import firebase from 'firebase/app'
 import { initializeApp } from "firebase/app";
 import { getFirestore } from "firebase/firestore";
-// import { getAnalytics } from "firebase/analytics";
 
 import Axios from 'axios'
 
@@ -17,11 +14,7 @@ const firebaseConfig = {
 };
 
 // Initialize Firebase
-initializeApp(firebaseConfig);
-// const analytics = getAnalytics(app);
-
-
-const db = getFirestore()
-
+const app =  initializeApp(firebaseConfig);
+const db = getFirestore(app);
 
 export { Axios, db }

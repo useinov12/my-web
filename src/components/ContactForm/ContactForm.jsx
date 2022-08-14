@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { Axios, db } from './../../../firebase/firebaseConfig.js'
+import { addDoc, collection } from "firebase/firestore";
 
 import './ContactForm.scss'
 
@@ -17,27 +18,30 @@ const ContactForm = ({contactFormIsOpen, handleCloseForm}) => {
         sendEmail()
         setFormData({
             name: '',
+            company:'',
             email: '',
             message: '',
         })
     }
     const sendEmail = () => {
-        Axios.post(
-            'https://us-central1-personal-website-f76e3.cloudfunctions.net/submit',
-            formData
-        )
-            .then(res => {
-                db.collection('emails').add({
-                    name: formData.name,
-                    email: formData.email,
-                    message: formData.message,
-                    time: new Date(),
-                })
-            })
-            .catch(error => {
-                console.log(error)
-            })
-    }
+    Axios.post(
+        'https://us-central1-personal-web-85b86.cloudfunctions.net/submit',
+        formData
+    )
+    .then( async (res) => {
+        try {
+            await addDoc(collection(db, "emails"), {
+                company:formData.company,
+                email: formData.email,
+                message: formData.message,
+                name: formData.name,
+                time: new Date(),
+            });
+        } catch (e) {
+            console.error("Error adding document: ", e);
+        }
+    })
+}
 
     return (
         <div className={'contact-form-window'}>
