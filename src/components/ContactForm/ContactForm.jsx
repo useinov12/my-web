@@ -6,6 +6,9 @@ import './ContactForm.scss'
 
 const ContactForm = ({contactFormIsOpen, handleCloseForm}) => {
     const [formData, setFormData] = useState({})
+    
+    const [status, setStatus] = useState('')
+    const [message, setMessage] = useState('')
 
     const updateInput = e => {
         setFormData({
@@ -24,24 +27,40 @@ const ContactForm = ({contactFormIsOpen, handleCloseForm}) => {
         })
     }
     const sendEmail = () => {
-    Axios.post(
-        'https://us-central1-personal-web-85b86.cloudfunctions.net/submit',
-        formData
-    )
-    .then( async (res) => {
-        try {
-            await addDoc(collection(db, "emails"), {
-                company:formData.company,
-                email: formData.email,
-                message: formData.message,
-                name: formData.name,
-                time: new Date(),
-            });
-        } catch (e) {
-            console.error("Error adding document: ", e);
-        }
-    })
-}
+        Axios.post(
+            'https://us-central1-personal-web-85b86.cloudfunctions.net/submit',
+            formData
+        )
+        .then( async (res) => {
+            setStatus('success')
+            setMessage('Message sent successfully!')
+            try {
+                await addDoc(collection(db, "emails"), {
+                    company:formData.company,
+                    email: formData.email,
+                    message: formData.message,
+                    name: formData.name,
+                    time: new Date(),
+                });
+            } catch (e) {
+                setStatus('error')
+                setMessage('Message not sent :(')
+            }
+        })
+        .catch(e =>{
+            setStatus('error')
+            setMessage('Message not sent :(')
+        })
+    }
+
+    useEffect(()=>{
+        let timer = setTimeout(()=>{
+            setStatus('')
+            setMessage('')
+            console.log('Change')
+        }, 3000)
+        return () => clearTimeout(timer);
+    }, [status])
 
     return (
         <div className={'contact-form-window'}>
@@ -73,12 +92,19 @@ const ContactForm = ({contactFormIsOpen, handleCloseForm}) => {
                         placeholder="Message"
                         onChange={updateInput}
                         value={formData.message || ''}
-                    ></textarea>
+                    />
                     <button type='submit' className={'contact-form-submit-button'}>
                         Submit
                     </button>
+
+                    <div className={`status-message ${status}`}>
+                        {message}
+                    </div>
                 </form>
+
+
             </div>
+
         </div>
     )
 }
