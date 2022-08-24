@@ -11,9 +11,9 @@ import ContactForm from '@components/ContactForm/ContactForm'
 import LinkCustom from '@components/atoms/LinkCustom/LinkCustom'
 import Button from '@components/atoms/Button/Button'
 
-import {FaLinkedin, FaGithub } from "react-icons/fa";
-import {SiGmail} from "react-icons/si";
-
+import {FaLinkedin, FaGithub,FaHeart } from "react-icons/fa";
+import {SiGmail, SiGatsby, SiReact} from "react-icons/si";
+// import { SiTypescript, SiReact, SiStorybook, SiGatsby, SiGreensock, SiMongodb, SiGooglecloud, SiJest, SiMaterialui, SiSass, SiFirebase } from "react-icons/si";
 import './../../styles/index.scss'
 import './_layout.scss'
 
@@ -48,6 +48,7 @@ const Layout = ({children}) => {
                 ease:'expo.inOut'
             })
             tl.to( queryInfoSection('.info-container'),{ opacity:1, duration:.5 } )
+            tl.to( queryInfoSection('.footer'),{ opacity:1, duration:.5 } )
         } 
     },[openMenu]);
 
@@ -62,6 +63,7 @@ const Layout = ({children}) => {
                 ease:'expo.in'
             })
             tl.to( queryInfoSection('.info-container'),{ opacity:0, duration:.4 } )
+            tl.to( queryInfoSection('.footer'),{ opacity:0, duration:.2 } )
             tl.to(MainBoxRef.current, {
                 height:'30%',
                 borderRadius:'25% 25% 0 0 ',
@@ -88,7 +90,7 @@ const Layout = ({children}) => {
                         <LinkCustom  large  link={'https://www.linkedin.com/in/ruslan-useinov-330b5a23a/'}> 
                             <FaLinkedin />
                         </LinkCustom>
-                        <LinkCustom  large link={'https://github.com/ruslaaaan'}>
+                        <LinkCustom  large link={'https://github.com/useinov12'}>
                             <FaGithub/>
                         </LinkCustom>
                         <LinkCustom  large>
@@ -106,13 +108,13 @@ const Layout = ({children}) => {
                     
                         <nav className='navigation'>
                             <div ref={contactBtnRef}  className={'button--contacts-container'}>
-                                {<Link to="/">
+                                <Link to="/">
                                     <Button 
                                         label={'contacts'}
                                         className={'button--nav'} 
                                         active={pathname === '/' ? true:false }
                                     />
-                                </Link>}
+                                </Link>
                             </div>
                             <Link to="/About"  >
                                 <Button 
@@ -129,12 +131,15 @@ const Layout = ({children}) => {
                                 />
                             </Link>
                         </nav>
-                        <div  className={'info-container'}>
+                        <div  className={'page-container'}>
                             {children}
                         </div>
                     </div>
+                    <div className="footer">
+                        Built with <FaHeart/> using <SiReact/> and <SiGatsby/> 
+                    </div>  
                 </div>
-                    
+
             </div>
         </>
     )
