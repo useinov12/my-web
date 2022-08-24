@@ -13,7 +13,6 @@ import Button from '@components/atoms/Button/Button'
 
 import {FaLinkedin, FaGithub,FaHeart } from "react-icons/fa";
 import {SiGmail, SiGatsby, SiReact} from "react-icons/si";
-// import { SiTypescript, SiReact, SiStorybook, SiGatsby, SiGreensock, SiMongodb, SiGooglecloud, SiJest, SiMaterialui, SiSass, SiFirebase } from "react-icons/si";
 import './../../styles/index.scss'
 import './_layout.scss'
 
