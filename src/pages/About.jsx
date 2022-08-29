@@ -4,6 +4,8 @@ import { TextPlugin } from "gsap/TextPlugin.js";
 import {LayoutContext} from '@components/Layout/Context/LayoutContextProvider'
 import LinkCustom from '@components/atoms/LinkCustom/LinkCustom'
 
+import pdf from '@assets/MyResume.pdf'
+
 import 'styles/pages/about.scss'
 
 const About = () => {
@@ -127,8 +129,8 @@ const About = () => {
             </div>
             <span className='box-type-2 highlight final' id='box-text-9'></span>
 
-            <div style={{opacity:0, marginTop:'2rem'}} id='link-to-resume'>
-                <LinkCustom medium  link={'https://www.linkedin.com/in/ruslan-useinov-330b5a23a/'} >
+            <div  className='link-to-resume' style={{opacity:0, marginTop:'2rem'}} id='link-to-resume'>
+                <LinkCustom medium link={pdf}>
                     Resume
                 </LinkCustom>
             </div>
