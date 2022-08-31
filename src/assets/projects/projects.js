@@ -7,6 +7,7 @@ import { FaGithub } from 'react-icons/fa';
 
 const projects = [
     {
+        id:1,
         heading:'Algortihm visualizer',
         subHeading:'Description',
         text:[
@@ -26,6 +27,7 @@ const projects = [
         ]
     } ,
     {
+        id:2,
         heading:'Travel Companion',
         subHeading:'Description',
         text:[
@@ -45,6 +47,7 @@ const projects = [
         ]
     } ,    
     {
+        id:3,
         heading:'Personal Website',
         subHeading:'Description',
         text:[

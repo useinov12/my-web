@@ -13,6 +13,7 @@ import Button from '@components/atoms/Button/Button'
 
 import {FaLinkedin, FaGithub,FaHeart } from "react-icons/fa";
 import {SiGmail, SiGatsby, SiReact} from "react-icons/si";
+import pdf from '@assets/MyResume1.pdf'
 import './../../styles/index.scss'
 import './_layout.scss'
 
@@ -96,6 +97,9 @@ const Layout = ({children}) => {
                             <SiGmail onClick={()=>handleCloseForm()}/>
                         </LinkCustom>
                     </div>
+                    <LinkCustom medium link={pdf}>
+                        Resume
+                    </LinkCustom>
                 </div>
                 
                 {contactFormIsOpen && <ContactForm handleCloseForm={handleCloseForm}/>}
@@ -103,7 +107,6 @@ const Layout = ({children}) => {
                 
                 <div ref={MainBoxRef} className={`main-content ${openMenu ? 'expanded' : '' }`}>
                     <div className={'content'}>
-                    
                     
                         <nav className='navigation'>
                             <div ref={contactBtnRef}  className={'button--contacts-container'}>
@@ -134,11 +137,11 @@ const Layout = ({children}) => {
                             {children}
                         </div>
                     </div>
+
                     <div className="footer">
                         Built with <FaHeart/> using <SiReact/> and <SiGatsby/> 
                     </div>  
                 </div>
-
             </div>
         </>
     )
