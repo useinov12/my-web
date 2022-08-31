@@ -8,7 +8,7 @@ import './Card.scss'
 const Card = (props) => {
     const {heading, subHeading, text, links, img, tech} = props;
     return (
-        <div className={'card-component'}>
+        <div className={`card-component`} >
             <div className={'card-left-section'}>
                 <h1>{heading}</h1>
                 <h2>{subHeading}</h2>
