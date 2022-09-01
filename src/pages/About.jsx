@@ -7,7 +7,7 @@ import LinkCustom from '@components/atoms/LinkCustom/LinkCustom'
 
 // import { FaPlay } from "react-icons/fa";
 
-import pdf from '@assets/MyResume1.pdf'
+import pdf from '@assets/RuslanUseinovResume.pdf'
 
 import 'styles/pages/about.scss'
 

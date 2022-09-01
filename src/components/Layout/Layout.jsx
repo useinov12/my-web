@@ -13,7 +13,7 @@ import Button from '@components/atoms/Button/Button'
 
 import {FaLinkedin, FaGithub,FaHeart } from "react-icons/fa";
 import {SiGmail, SiGatsby, SiReact} from "react-icons/si";
-import pdf from '@assets/MyResume1.pdf'
+import pdf from '@assets/RuslanUseinovResume.pdf'
 import './../../styles/index.scss'
 import './_layout.scss'
 
