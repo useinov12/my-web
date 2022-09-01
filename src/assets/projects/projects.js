@@ -11,6 +11,7 @@ const projects = [
         heading:'Algortihm visualizer',
         subHeading:'Description',
         text:[
+            'Visualization of popular Sorting and Searching algorithms.',
             'The project built in Typescript using React, D3.JS data visualization library and CSS. Functional testing done with Jest.', 
             'User can run algoritms in Compare Mode or Single Mode'
         ],
@@ -31,8 +32,8 @@ const projects = [
         heading:'Travel Companion',
         subHeading:'Description',
         text:[
-            'App showes restaraunts, hotels and local sights for a current or given location. Browse thru and filter locations by type of and rating.', 
-            'User can log in with GoogleSignIn and save place to Favorites', 
+            'App shows restaurants, hotels and local sights for a current or given location. Browse thru and filter locations by type of and rating.', 
+            'User can log in with GoogleSignIn and save place to Favorites.', 
         ],
         img:travelcomp,
         tech:[
@@ -44,6 +45,7 @@ const projects = [
             [<SiMaterialui/>, 'MaterialUI']],
         links:[ 
             {link:'https://github.com/ruslaaaan/travel_companion', label:[<FaGithub/>, 'GitHub']},
+            {link:'https://desolate-shelf-15182.herokuapp.com/', label:'Live version'},
         ]
     } ,    
     {
@@ -51,7 +53,7 @@ const projects = [
         heading:'Personal Website',
         subHeading:'Description',
         text:[
-            "Personal website itself in portfolio project's too!", 
+            "This website itself in portfolio project's too!", 
             'Drawn in Figma, patiently created with React components in Storybook, peppered with GSAP animations, and came to life with Gatsby!'
         ],
         img:webgif,
