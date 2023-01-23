@@ -4,7 +4,7 @@
 A personal Website.
 Built with React, Gatsby, JavaScript, Sass, Firebase and Storybook.
 
-Live version at [www.RuslanUseinov.net](https://ruslanuseinov.net/).
+[Live version](https://timely-sunshine-57d072.netlify.app/)
 
 ## Project Status
 
